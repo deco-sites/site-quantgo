@@ -43,14 +43,13 @@ export default function Header({
   },
 }: Nav) {
   return (
-    <nav class="drawer drawer-end">
+    <nav class="drawer drawer-end bg-black text-white">
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
-      <div class="drawer-content container lg:px-0 px-4 flex gap-8 items-center justify-between py-4">
-        <a href="/">
-          <Image src={logo.src || ""} width={100} height={28} alt={logo.alt} />
-        </a>
+      <div class="drawer-content container lg:px-0 px-4 flex gap-8 items-center justify-between py-4 bg-black">        <a href="/">
+        <Image src={logo.src || ""}  alt={logo.alt} class="w-full h-auto" />
+      </a>
 
         <div class="hidden items-center justify-between lg:flex w-full">
           <ul class="flex">
@@ -59,7 +58,7 @@ export default function Header({
                 <a
                   href={link.url}
                   aria-label={link.label}
-                  class="link no-underline hover:underline p-4"
+                  class="link no-underline hover:underline p-4 text-white"
                 >
                   {link.label}
                 </a>
@@ -73,8 +72,8 @@ export default function Header({
                 id={item?.id}
                 href={item?.href ?? "#"}
                 target={item?.href.includes("http") ? "_blank" : "_self"}
-                class={`font-normal btn btn-primary ${
-                  item.outline && "btn-outline"
+                class={`font-normal btn bg-black text-white border border-white hover:bg-white hover:text-black ${
+                  item.outline ? "btn-outline" : ""
                 }`}
               >
                 {item?.text}
@@ -85,7 +84,7 @@ export default function Header({
 
         <label
           htmlFor="mobile-drawer-nav"
-          class="flex lg:hidden btn btn-ghost drawer-button"
+          class="flex lg:hidden btn btn-ghost drawer-button text-white"
         >
           <Icon id="Bars3" size={24} strokeWidth={0.1} />
         </label>
@@ -100,7 +99,7 @@ export default function Header({
           class="drawer-overlay"
         />
 
-        <div class="flex flex-col gap-8 min-h-full w-80 bg-base-100 text-base-content">
+        <div class="flex flex-col gap-8 min-h-full w-80 bg-black text-white">
           <a class="p-4" href="/">
             <Image
               src={logo.src || ""}
@@ -127,8 +126,8 @@ export default function Header({
                 id={item?.id}
                 href={item?.href ?? "#"}
                 target={item?.href.includes("http") ? "_blank" : "_self"}
-                class={`font-normal btn btn-primary ${
-                  item.outline && "btn-outline"
+                class={`font-normal btn bg-black text-white border border-white hover:bg-white hover:text-black ${
+                  item.outline ? "btn-outline" : ""
                 }`}
               >
                 {item?.text}

@@ -1,1 +1,15 @@
-{"__resolveType":"site/sections/Header.tsx","navigation":{"links":[],"buttons":[]}}
+{
+  "__resolveType": "site/sections/Header.tsx",
+  "navigation": {
+    "links": [
+      {
+        "label": "Home",
+        "url": "/"
+      }
+    ],
+    "buttons": []
+  },
+  "logo": {
+    "src": "https://data.decoassets.com/site-quantgo/abd573a8-5dda-4482-aa80-246021bb8e6f/901221_1_172718777213426293.png"
+  }
+}
